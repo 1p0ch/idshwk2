@@ -1,4 +1,5 @@
-detect a tcp packet with
-· Destination Port at 8080, TCPFLAG ACK set, a string “I am IDS Homework I” 
-in payload [100th byte-200th byte]
-· alert message “TEST ALERT” 
+if snort see two packets in a TCP flow with 
+• first packet has “login” or “Initial” in payload, destination port is 3399;
+• and second packet has a “IPv4Address:Port”string(E.g. 123.45.6.7:8080) in payload. destination port is 
+3399;
+• output a alert with msg “bot founded” and sid 1000001
